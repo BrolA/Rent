@@ -49,6 +49,13 @@ class Opinion
      */
     private $car;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Clients", type="string", length=255)
+     */
+    private $clients;
+
 
     /**
      * Get id
@@ -133,27 +140,51 @@ class Opinion
     }
 
     /**
-     * Set car
+     * Set cars
      *
-     * @param string $car
+     * @param string $cars
      *
      * @return Opinion
      */
-    public function setCar($car)
+    public function setCar($cars)
     {
-        $this->car = $car;
+        $this->cars = $cars;
 
         return $this;
     }
 
     /**
-     * Get car
+     * Get cars
      *
      * @return string
      */
-    public function getCar()
+    public function getCars()
     {
-        return $this->car;
+        return $this->cars;
+    }
+
+    /**
+     * Set clients
+     *
+     * @param string $clients
+     *
+     * @return Opinion
+     */
+    public function setClients($clients)
+    {
+        $this->clients = $clients;
+
+        return $this;
+    }
+
+    /**
+     * Get clients
+     *
+     * @return string
+     */
+    public function getClients()
+    {
+        return $this->clients;
     }
 }
 
