@@ -18,7 +18,8 @@ class OpinionType extends AbstractType
             ->add('tytul')
             ->add('dataDodania', 'date')
             ->add('opinia')
-            ->add('car')
+            ->add('cars')
+            ->add('clients')
         ;
     }
     
