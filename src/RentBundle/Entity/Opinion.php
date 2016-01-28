@@ -146,7 +146,7 @@ class Opinion
      *
      * @return Opinion
      */
-    public function setCar($cars)
+    public function setCars($cars)
     {
         $this->cars = $cars;
 
