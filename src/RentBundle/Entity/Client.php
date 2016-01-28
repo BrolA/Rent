@@ -2,7 +2,7 @@
 
 namespace RentBundle\Entity;
 
-use FOS\RentBundle\Entity\Client as BaseUser;
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
