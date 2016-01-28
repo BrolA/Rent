@@ -15,7 +15,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car1->setModel('Ford');
         $car1->setKategoria('Osobowy');
         $car1->setKolor('Czerwony');
-        $car1->setCenaDoba('100');
+        $car1->setCenaDoba(100);
         $car1->setWypozyczony(true);
 
         $car2 = new Car();
@@ -23,7 +23,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car2->setModel('Fiat');
         $car2->setKategoria('Dostawczy');
         $car2->setKolor('Biały');
-        $car2->setCenaDoba('200');
+        $car2->setCenaDoba(200);
         $car2->setWypozyczony(true);
 
         $car3 = new Car();
@@ -31,7 +31,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car3->setModel('BMW');
         $car3->setKategoria('Sportowy');
         $car3->setKolor('Czarny');
-        $car3->setCenaDoba('300');
+        $car3->setCenaDoba(300);
         $car3->setWypozyczony(true);
 
         $car4 = new Car();
@@ -39,7 +39,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car4->setModel('Jeep');
         $car4->setKategoria('Terenowy');
         $car4->setKolor('Zielony');
-        $car4->setCenaDoba('150');
+        $car4->setCenaDoba(150);
         $car4->setWypozyczony(true);
 
         $car5 = new Car();
@@ -47,7 +47,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car5->setModel('Skoda');
         $car5->setKategoria('Limuzyna');
         $car5->setKolor('Srebrny');
-        $car5->setCenaDoba('500');
+        $car5->setCenaDoba(500);
         $car5->setWypozyczony(true);
 
         $manager->persist($car1);
