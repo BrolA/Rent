@@ -45,9 +45,9 @@ class Opinion
     /**
      * @var string
      *
-     * @ORM\Column(name="Car", type="string", length=255)
+     * @ORM\Column(name="Cars", type="string", length=255)
      */
-    private $car;
+    private $cars;
 
     /**
      * @var string
