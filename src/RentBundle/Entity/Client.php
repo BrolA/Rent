@@ -2,6 +2,7 @@
 
 namespace RentBundle\Entity;
 
+use FOS\RentBundle\Entity\Client as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="client")
  * @ORM\Entity(repositoryClass="RentBundle\Repository\ClientRepository")
  */
-class Client
+class Client extends BaseUser
 {
     /**
      * @var int
@@ -19,7 +20,7 @@ class Client
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -49,7 +50,9 @@ class Client
      */
     private $comments;
 
-
+public function _construct(){
+    parent::_construct();
+}
     /**
      * Get id
      *
