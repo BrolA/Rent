@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Rent list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Car</th>
+                <th>Client</th>
+                <th>Datawypozyczenia</th>
+                <th>Dataoddania</th>
+                <th>Kwotaodklienta</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rent in rents %}
+            <tr>
+                <td><a href="{{ path('rent_show', { 'id': rent.id }) }}">{{ rent.id }}</a></td>
+                <td>{{ rent.car }}</td>
+                <td>{{ rent.client }}</td>
+                <td>{% if rent.dataWypozyczenia %}{{ rent.dataWypozyczenia|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if rent.dataOddania %}{{ rent.dataOddania|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ rent.kwotaOdKlienta }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rent_show', { 'id': rent.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rent_edit', { 'id': rent.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rent_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
