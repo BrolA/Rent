@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Opinion</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ opinion.id }}</td>
+            </tr>
+            <tr>
+                <th>Tytul</th>
+                <td>{{ opinion.tytul }}</td>
+            </tr>
+            <tr>
+                <th>Datadodania</th>
+                <td>{% if opinion.dataDodania %}{{ opinion.dataDodania|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Opinia</th>
+                <td>{{ opinion.opinia }}</td>
+            </tr>
+            <tr>
+                <th>Car</th>
+                <td>{{ opinion.car }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('opinion_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('opinion_edit', { 'id': opinion.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
