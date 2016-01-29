@@ -31,7 +31,7 @@ class Opinion
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DataDodania", type="date")
+     * @ORM\Column(name="DataDodania", type="datetime")
      */
     private $dataDodania;
 
@@ -43,18 +43,18 @@ class Opinion
     private $opinia;
 
     /**
-     * @var string
+     * 
      *
-     * @ORM\Column(name="Cars", type="string", length=255)
+     * @ORM\OneToOne(targetEntity="Car", mappedBy="opinion")
      */
-    private $cars;
+    private $car;
 
     /**
-     * @var string
+     * 
      *
-     * @ORM\Column(name="Clients", type="string", length=255)
+     * @ORM\OneToOne(targetEntity="Client", mappedBy="opinion")
      */
-    private $clients;
+    private $client;
 
 
     /**
@@ -140,51 +140,51 @@ class Opinion
     }
 
     /**
-     * Set cars
+     * Set car
      *
-     * @param string $cars
+     * @param string $car
      *
      * @return Opinion
      */
-    public function setCars($cars)
+    public function setCar($car)
     {
-        $this->cars = $cars;
+        $this->car = $car;
 
         return $this;
     }
 
     /**
-     * Get cars
+     * Get car
      *
      * @return string
      */
-    public function getCars()
+    public function getCar()
     {
-        return $this->cars;
+        return $this->car;
     }
 
     /**
-     * Set clients
+     * Set client
      *
-     * @param string $clients
+     * @param string $client
      *
      * @return Opinion
      */
-    public function setClients($clients)
+    public function setClient($client)
     {
-        $this->clients = $clients;
+        $this->client = $client;
 
         return $this;
     }
 
     /**
-     * Get clients
+     * Get client
      *
      * @return string
      */
-    public function getClients()
+    public function getClient()
     {
-        return $this->clients;
+        return $this->client;
     }
 }
 

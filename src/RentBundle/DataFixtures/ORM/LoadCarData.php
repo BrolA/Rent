@@ -11,7 +11,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $car1 = new Car();
-        $car1->setZdjecie($zdjecie);
+        $car1->setZdjecie('/../public_html/web/bundles/framework/images/ford_czerwony.jpg');
         $car1->setModel('Ford');
         $car1->setKategoria('Osobowy');
         $car1->setKolor('Czerwony');
@@ -19,7 +19,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car1->setWypozyczony(true);
 
         $car2 = new Car();
-        $car2->setZdjecie($zdjecie);
+        $car2->setZdjecie('/../public_html/web/bundles/framework/images/fiat_bialy.jpg');
         $car2->setModel('Fiat');
         $car2->setKategoria('Dostawczy');
         $car2->setKolor('Biały');
@@ -27,7 +27,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car2->setWypozyczony(true);
 
         $car3 = new Car();
-        $car3->setZdjecie($zdjecie);
+        $car3->setZdjecie('/../public_html/web/bundles/framework/images/bmw_czarne.jpg');
         $car3->setModel('BMW');
         $car3->setKategoria('Sportowy');
         $car3->setKolor('Czarny');
@@ -35,7 +35,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car3->setWypozyczony(true);
 
         $car4 = new Car();
-        $car4->setZdjecie($zdjecie);
+        $car4->setZdjecie('/../public_html/web/bundles/framework/images/jeep_zielony.jpg');
         $car4->setModel('Jeep');
         $car4->setKategoria('Terenowy');
         $car4->setKolor('Zielony');
@@ -43,7 +43,7 @@ class LoadCarData extends AbstractFixture implements OrderedFixtureInterface
         $car4->setWypozyczony(true);
 
         $car5 = new Car();
-        $car5->setZdjecie($zdjecie);
+        $car5->setZdjecie('/../public_html/web/bundles/framework/images/skoda_srebrna.jpg');
         $car5->setModel('Skoda');
         $car5->setKategoria('Limuzyna');
         $car5->setKolor('Srebrny');

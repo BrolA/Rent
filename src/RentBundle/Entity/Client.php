@@ -2,7 +2,7 @@
 
 namespace RentBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
+//use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -11,7 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="client")
  * @ORM\Entity(repositoryClass="RentBundle\Repository\ClientRepository")
  */
-class Client extends BaseUser
+//extends BaseUser
+class Client 
 {
     /**
      * @var int
@@ -37,22 +38,22 @@ class Client extends BaseUser
     private $nazwisko;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="Rents", type="string", length=255)
+     * @ORM\Column(name="Rents", type="string", length=255, nullable=true)
      */
     private $rents;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Comments", type="string", length=255)
+     * @ORM\Column(name="Comments", type="string", length=255, nullable=true)
      */
     private $comments;
 
-public function _construct(){
-    parent::_construct();
-}
+//public function _construct(){
+//    parent::_construct();
+//}
     /**
      * Get id
      *

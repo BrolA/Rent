@@ -217,5 +217,9 @@ class Car
     {
         return $this->wypozyczony;
     }
+    public function __toString()
+    {
+        return $this->car;
+    }
 }
 
