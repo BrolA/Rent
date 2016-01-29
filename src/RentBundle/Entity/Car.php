@@ -37,7 +37,7 @@ class Car
 
     /**
      * @var string
-     *
+     * dupa
      * @ORM\Column(name="Kategoria", type="string", length=255)
      */
     private $kategoria;
