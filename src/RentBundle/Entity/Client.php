@@ -38,16 +38,16 @@ class Client
     private $nazwisko;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="Rents", type="string", length=255)
+     * @ORM\Column(name="Rents", type="string", length=255, nullable=true)
      */
     private $rents;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Comments", type="string", length=255)
+     * @ORM\Column(name="Comments", type="string", length=255, nullable=true)
      */
     private $comments;
 
