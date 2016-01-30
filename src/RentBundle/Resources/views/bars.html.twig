@@ -1,0 +1,49 @@
+
+{% extends "RentBundle::layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block header %}
+<div class="page-header">
+	<div class="row">
+
+
+
+		<div class="col-md-8">
+            <h1 style="text-align: center">AutoHaus Rent - Pan Samochodzik</h1>
+            <h2 style="text-align: center">The best Cars just 4U!</h2>
+            <h3 style="text-align: center">Brol - Ignasik - Konieczny</h3>
+        </div>
+
+		<div class="col-md-2">
+
+	{% if app.user.username is defined %}
+
+	 <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><p>Zalogowany jako <a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/profile"><strong><em>{{ app.user.username }}</em></strong></p></a></li>
+        <li><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/OrdersList">Twoja lista wypożyczonych samochodów</a></li>    
+        <li><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/OrdersBuy">Twoja lista wypożyczonych samochodów</a></li>
+        <li><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/logout">Wyloguj się</a></li>
+      </ul>
+    </div>
+
+	{% else %}
+
+	<div>
+      <ul class="nav navbar-nav">
+        <li class="active"><p>Jesteś niezalogowany<br></p></li>
+        <li><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/login">Lognij się</a></li>    
+        <li><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/register">Zarejestruj się</a></li>
+      </ul>
+    </div>
+	
+	{% endif %}
+		</div>	
+	</div>
+</div>
+
+	{% endblock %}
+
+	{% block menu %}
+
+	{% endblock %}
