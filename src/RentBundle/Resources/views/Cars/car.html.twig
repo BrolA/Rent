@@ -1,0 +1,67 @@
+
+            {% extends "RentBundle::bars.html.twig" %}
+
+
+            {% block header %}
+            
+            <div class="container"> 
+                <h1 style="text-align: center">{{ car.model }}</h1>
+            </div>
+
+            {% endblock %}
+
+
+            {% block content %}
+        
+            <div class="container">           
+                <div class="row" style="text-align: center">      
+   
+                     <img src="{{asset('RentBundle/images/')}}{{ car.zdjecie }}.jpg" alt="Cars" class="img-thumbnail" height="50%" width="50%">
+                       
+                        <br> Samochod: {{ car.model }} </a>
+                        
+                        <h4>
+                            <br> Kolor: <br> {{ car.kolor }} <br>
+                            <br> Id_auto: <br> {{ car.id }} <br>
+                            <br> Cena: <br> {{ car.cenaDoba }} <br>
+                            <br> Kategoria: <br>
+                        
+                            {% for cars in cars %}
+                            {% if (cars.idCar == car.id) %}
+                                {{ cars.kategoria }}
+
+                            {% endif %}
+                            {% endfor %}
+
+                            <br><br>
+                        
+                        </h4>
+                            
+                <!-- Buttony  Wypożyczania, logowania oraz rejestracji -->
+
+            {% if app.user.username is defined %}
+
+                <a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/Orders"><button type="button" class="btn btn-primary">Wypożycz!</button></a><br>
+
+            {% else %}
+
+                <a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/login"><button type="button" class="btn btn-danger">Lognij się</button></a><br>
+
+            {%endif%}
+
+            {% if app.user.username is defined %}
+
+            <a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/Opinia"><button type="button" class="btn btn-primary">+Dodaj swoja opinie</button></a>
+
+            {%endif%}
+
+                <!-- Powrót do strony głównej Wypozyczalni -->
+
+            <br><a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/">Strona głowna</a><br>        
+ 
+        
+ 
+                </div>
+            </div>
+
+            {% endblock %}
