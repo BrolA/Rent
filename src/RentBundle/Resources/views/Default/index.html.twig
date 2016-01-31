@@ -17,9 +17,9 @@
 
                  <br><a href="{{path('car_show', {'id': car.id})}}">
                 <img src="{{asset('RentBundle/images/')}}{{ car.zdjecie }}.jpg" alt="Cars" class="img-circle" height="70" width="70">
-                        {#Samochód:#}
+                        Samochód:
                         {{ car.model }} </a>
-                        {#<br>Kolor:{{ car.kolor }}
+                        <br>Kolor:{{ car.kolor }}
                         <br>Id_auto:{{ car.id }}
                         <br>Cena:{{ car.cenaDoba }}             
             </div>  
@@ -70,9 +70,9 @@
         </div>
 
         <!-- Stopka -->
-        {#<div class="container">
+        <div class="container">
              <div class="page-footer"></div>
             <p>Brol - Ignasik - Konieczny</p>
-        </div>#}
+        </div>
 
                     {% endblock %}
