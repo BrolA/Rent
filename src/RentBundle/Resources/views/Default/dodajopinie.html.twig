@@ -1,0 +1,30 @@
+
+
+		{% extends "RentBundle::bars.html.twig" %}
+
+			{% block header %}
+		
+			{% endblock %}
+
+
+
+			{% block content %}
+
+				<div class="container">           
+    				<div class="row" style="text-align: center">
+
+							<h2>Dodaj swoja opinie</h2>
+		
+					<!--  POST - dane z formularza są wysyłane jako część nagłówka HTTP -->
+						<form method="POST">
+
+					<!-- form_widget(view, variables) - Renderuje widget HTML dla danego pola -->	
+							{{ form_widget(form) }} 
+							<button type="submit">Dodaj opinie</button>
+
+						</form>
+		
+					</div>
+				</div>    
+
+ 			{% endblock %}
