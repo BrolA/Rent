@@ -1,0 +1,24 @@
+
+
+        {% extends "RentBundle::bars.html.twig" %}
+
+
+
+            {% block header %}
+        <h1>{{attribute(car, car5).model}}</h1>
+            {% endblock %}
+
+            {% block content %}
+        
+      
+        <ul>        
+            <li><img src="{{asset('/../public_html/web/bundles/framework/images/skoda_srebrna.jpg')}}{{attribute(car, car5).image}}.jpg" alt="Cars" class="img-thumbnail" height="42" width="42">
+                <br>Model:{{attribute(car, car5).model}}
+                <br>Kategoria:{{attribute(car, car5).kategoria}}
+                <br>Id_auta:{{attribute(car, car5).id}}
+                <br>Kolor:{{attribute(car, car5).kolor}}
+                <br>Cena:{{attribute(car, car5).cenaDoba}}
+            </li>
+        </ul>
+    
+            {% endblock %}
