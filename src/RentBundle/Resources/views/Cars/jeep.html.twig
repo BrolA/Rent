@@ -1,0 +1,24 @@
+
+
+        {% extends "RentBundle::bars.html.twig" %}
+
+
+
+            {% block header %}
+        <h1>{{attribute(car, car4).model}}</h1>
+            {% endblock %}
+
+            {% block content %}
+        
+      
+        <ul>        
+            <li><img src="{{asset('/../public_html/web/bundles/framework/images/jeep_zielony.jpg')}}{{attribute(car, car4).image}}.jpg" alt="Cars" class="img-thumbnail" height="42" width="42">
+                <br>Model:{{attribute(car, car4).model}}
+                <br>Kategoria:{{attribute(car, car4).kategoria}}
+                <br>Id_auta:{{attribute(car, car4).id}}
+                <br>Kolor:{{attribute(car, car4).kolor}}
+                <br>Cena:{{attribute(car, car4).cenaDoba}}
+            </li>
+        </ul>
+    
+            {% endblock %}
