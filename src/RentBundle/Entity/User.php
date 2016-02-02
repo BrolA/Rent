@@ -29,12 +29,7 @@ class User extends BaseUser
         // your own logic
     }
     
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Adres", type="string", length=255)
-     */
-    private $adres;
+   
 
 
     /**
