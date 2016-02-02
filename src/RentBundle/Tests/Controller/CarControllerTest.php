@@ -20,7 +20,7 @@ class CarControllerTest extends WebTestCase
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
             'rentbundle_car[field_name]'  => 'Test',
-            // ... other fields to fill
+            // ... other fields to fill here
         ));
 
         $client->submit($form);
