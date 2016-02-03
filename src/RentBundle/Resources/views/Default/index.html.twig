@@ -11,7 +11,7 @@
         <div class="container">           
             <div class="row">
                      
-            {% for car in car %}
+            {% for car in cars %}
     
             <div class="col-md-1" style="height:200px">
 
@@ -36,7 +36,7 @@
                     <!-- Najlepsze samochody -->
                     <h1><small>TOP Samochody</small></h1><br>
          
-                         {% for rent in rent %}
+                         {% for rent in rents %}
                
                     <a href="{{path('car_show', {'id': rent.0.id})}}">
                     <img src="{{asset('RentBundle/images/')}}{{ rent.0.image }}.jpg" alt="Cars" class="img-circle" height="70" width="70">
