@@ -28,7 +28,7 @@ class CarController extends Controller
 
         $cars = $em->getRepository('RentBundle:Car')->findAll();
 
-        return $this->render('car/index.html.twig', array(
+        return $this->render('RentBundle:Default:index.html.twig', array(
             'cars' => $cars,
         ));
     }

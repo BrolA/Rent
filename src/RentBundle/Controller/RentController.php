@@ -28,7 +28,7 @@ class RentController extends Controller
 
         $rents = $em->getRepository('RentBundle:Rent')->findAll();
 
-        return $this->render('rent/index.html.twig', array(
+        return $this->render('RentBundle:Default:index.html.twig', array(
             'rents' => $rents,
         ));
     }
