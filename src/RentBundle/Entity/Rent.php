@@ -22,18 +22,18 @@ class Rent
     private $id;
 
     /**
-     * @var string
+     * @ORM\ManyToOne(targetEntity="Car", inversedBy="rent")
      *
-     * @ORM\Column(name="Car", type="string", length=255)
+     * 
      */
-    private $car;
+    protected $car;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Client", type="string", length=255)
+     * 
+     * @ORM\ManyToOne(targetEntity="Client", inversedBy="rent")
+     * 
      */
-    private $client;
+    protected $client;
 
     /**
      * @var \DateTime

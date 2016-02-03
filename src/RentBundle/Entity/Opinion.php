@@ -47,15 +47,25 @@ class Opinion
      *
      * @ORM\OneToOne(targetEntity="Car", mappedBy="opinion")
      */
-    private $car;
+    protected $car;
+
+     public function __construct()
+    {
+        $this->car = new ArrayCollection();
+    }
 
     /**
      * 
      *
      * @ORM\OneToOne(targetEntity="Client", mappedBy="opinion")
      */
-    private $client;
-
+    protected $client;
+/*
+     public function __construct()
+    {
+        $this->client = new ArrayCollection();
+    }
+*/
 
     /**
      * Get id
