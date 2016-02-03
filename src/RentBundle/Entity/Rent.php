@@ -24,7 +24,7 @@ class Rent
 
     /**
      * @ORM\ManyToOne(targetEntity="Car", inversedBy="rent")
-     *
+     * @ORM\JoinColumn(name="id_car", referencedColumnName="id")
      * 
      */
     protected $car;
@@ -32,7 +32,7 @@ class Rent
     /**
      * 
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="rent")
-     * 
+     * @ORM\JoinColumn(name="id_client", referencedColumnName="id")
      */
     protected $client;
 
