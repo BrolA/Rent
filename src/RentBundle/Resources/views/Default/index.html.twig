@@ -1,5 +1,3 @@
-    
-
     {% extends "RentBundle::bars.html.twig" %}
     {% trans_default_domain 'FOSUserBundle' %}
 
@@ -43,7 +41,7 @@
                     <br>{{rent.0.title}}</a>
                     <br>Liczba wypożyczeń samochodów:{{ rent.c}}<br><br>
              
-                        {%endfor%}               
+                        {% endfor %}               
                 </div>
 
                 <!-- Najlepiej oceniane -->
@@ -58,7 +56,7 @@
                                 <br>{{opinia.0.title}}</a>
                         <br>Liczba opinii:{{ opinia.c}}<br><br>
                 
-                        {%endfor%}
+                        {% endfor %}
             </div>
 
             <!-- Kategorie -->
@@ -75,4 +73,82 @@
             <p>Brol - Ignasik - Konieczny</p>
         </div>
 
-                    {% endblock %}
+    
+
+    {% extends "RentBundle::bars.html.twig" %}
+    {% trans_default_domain 'FOSUserBundle' %}
+
+
+        {% block content %}
+    
+            
+        <h1 style="text-align: center"><small>Samochody do wypożyczenia:</small></h1>
+        <div class="container">           
+            <div class="row">
+                     
+            {% for car in Car %}
+    
+            <div class="col-md-1" style="height:200px">
+
+                 <br><a href="{{path('car_show', {'id': car.id})}}">
+                <img src="{{asset('RentBundle/images/')}}{{ car.zdjecie }}.jpg" alt="Cars" class="img-circle" height="70" width="70">
+                        Samochód:
+                        {{ car.model }} </a>
+                        <br>Kolor:{{ car.kolor }}
+                        <br>Id_auto:{{ car.id }}
+                        <br>Cena:{{ car.cenaDoba }}             
+            </div>  
+                               
+                        {% endfor %}
+            </div>
+        </div>
+
+        <div class="container">            
+            <div class="row">         
+                <div class="col-md-3" style="height:200px">    
+                    
+
+                    <!-- Najlepsze samochody -->
+                    <h1><small>TOP Samochody</small></h1><br>
+         
+                         {% for rent in rent %}
+               
+                    <a href="{{path('car_show', {'id': rent.0.id})}}">
+                    <img src="{{asset('RentBundle/images/')}}{{ rent.0.image }}.jpg" alt="Cars" class="img-circle" height="70" width="70">
+                    <br>{{rent.0.title}}</a>
+                    <br>Liczba wypożyczeń samochodów:{{ rent.c}}<br><br>
+             
+                        {% endfor %}               
+                </div>
+
+                <!-- Najlepiej oceniane -->
+            <div class="col-md-3" style="height:200px"> 
+                    <h1><small>TOP Oceniane</small></h1><br>
+                                    
+                        {% for opinia in opinia %}
+                  
+                        <a href="{{path('car_show', {'id': opinia.0.id})}}">
+                            <img src="{{asset('RentBundle/images/')}}{{ opinia.0.image }}.jpg" alt="Cars"
+                             class="img-circle" height="70" width="70">                    
+                                <br>{{opinia.0.title}}</a>
+                        <br>Liczba opinii:{{ opinia.c}}<br><br>
+                
+                        {% endfor %}
+            </div>
+
+            <!-- Kategorie -->
+            <div class="col-md-6" style="height:200px">                
+                    <h1><small>Według kategorii:</small></h1>                            
+            </div>
+
+            </div>
+        </div>
+
+        <!-- Stopka -->
+        <div class="container">
+             <div class="page-footer"></div>
+            <p>Brol - Ignasik - Konieczny</p>
+        </div>
+
+
+ {% endblock %}

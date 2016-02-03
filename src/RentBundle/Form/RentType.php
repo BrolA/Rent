@@ -24,7 +24,7 @@ class RentType extends AbstractType
     }
     
     /**
-     * @param OptionsResolver $resolver
+     * @param OptionsResolver $resolver resolver
      */
     public function configureOptions(OptionsResolver $resolver)
     {
