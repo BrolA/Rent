@@ -41,7 +41,7 @@ class User extends BaseUser
     {
         return $this->id;
     }
-
+/**
     /**
      * Set adres
      *
@@ -49,7 +49,7 @@ class User extends BaseUser
      *
      * @return User
      */
-
+/*
     public function setAdres($adres)
     {
         $this->adres = $adres;
@@ -62,9 +62,10 @@ class User extends BaseUser
      *
      * @return string
      */
-    public function getAdres()
+/*    public function getAdres()
     {
         return $this->adres;
     }
+*/
 }
 
