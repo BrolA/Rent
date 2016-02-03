@@ -5,6 +5,8 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use RentBundle\Entity\Client;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
 {
