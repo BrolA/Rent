@@ -3,6 +3,7 @@
 namespace RentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Car
@@ -57,12 +58,16 @@ class Car
     private $cenaDoba;
 
     /**
-     * @var bool
+     * 
      *
-     * @ORM\Column(name="Wypozyczony", type="boolean")
+     * @ORM\OneToOne(targetEntity="Rent", mappedBy="car")
      */
-    private $wypozyczony;
+    protected $wypozyczony;
 
+    public function __construct()
+    {
+        $this->wypozyczony = new ArrayCollection();
+    }
 
     /**
      * Get id

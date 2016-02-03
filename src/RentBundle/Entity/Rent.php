@@ -3,6 +3,7 @@
 namespace RentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Rent
@@ -22,18 +23,18 @@ class Rent
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Car", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Car", inversedBy="rent")
+     * @ORM\JoinColumn(name="id_car", referencedColumnName="id")
+     * 
      */
-    private $car;
+    protected $car;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Client", type="string", length=255)
+     * 
+     * @ORM\ManyToOne(targetEntity="Client", inversedBy="rent")
+     * @ORM\JoinColumn(name="id_client", referencedColumnName="id")
      */
-    private $client;
+    protected $client;
 
     /**
      * @var \DateTime

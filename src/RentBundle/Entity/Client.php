@@ -4,6 +4,7 @@ namespace RentBundle\Entity;
 
 //use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Client
@@ -38,19 +39,29 @@ class Client
     private $nazwisko;
 
     /**
-     * @var boolean
+     * 
      *
-     * @ORM\Column(name="Rents", type="string", length=255, nullable=true)
+     * @ORM\OneToOne(targetEntity="Rent", mappedBy="client")
      */
-    private $rents;
+    protected $rents;
+
+    public function __construct()
+    {
+        $this->rents = new ArrayCollection();
+    }
 
     /**
-     * @var string
+     * 
      *
-     * @ORM\Column(name="Comments", type="string", length=255, nullable=true)
+     * @ORM\OneToOne(targetEntity="Opinion", mappedBy="client")
      */
-    private $comments;
-
+    protected $comments;
+/*
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+    }
+*/
 //public function _construct(){
 //    parent::_construct();
 //}
