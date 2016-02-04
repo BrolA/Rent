@@ -3,12 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('Resources/public/css/bootstrap.min.css') }}" type="text/css">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <!--    <link rel="stylesheet" type="text/css" href="{{asset('')}}">   -->
+    
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% block body %}
+        
+                {% block header %}
+                <div class="container">
+            <header style="margin-top: 10px;">
+        joł
+
+                    
+
+                {% endblock %}
+        </div>
+    {% endblock %}
+        
+        {% block javascripts %}
+        <script src="http://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+            <script src="{{ asset('Resources/public/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        {% endblock %}
+
     </body>
 </html>
