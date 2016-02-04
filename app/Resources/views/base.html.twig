@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+<body bgcolor="#E6E6FA">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Welcome! and hello man{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <!--    <link rel="stylesheet" type="text/css" href="{{asset('')}}">   -->
@@ -10,5 +11,9 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+<img src="http://www.nyan.cat/cats/original.gif" alt="Mountain View">
+<footer>
+dupa
+</footer>
     </body>
 </html>
