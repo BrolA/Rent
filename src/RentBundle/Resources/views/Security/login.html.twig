@@ -1,9 +1,8 @@
+{% extends "RentBundle::bars.html.twig" %}
+    {% trans_default_domain 'FOSUserBundle' %}
 
-{% extends "RentBundle:views:layout.html.twig" %}
 
-{% trans_default_domain 'FOSUserBundle' %}
-
-{% block fos_user_content %}
+{% block content %}
 {% if error %}
 
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -26,8 +25,8 @@
 </form>
 
 
-<hr>
 
-{% endblock fos_user_content %}
+
+{% endblock %}
 
 
