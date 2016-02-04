@@ -33,8 +33,7 @@
 
                     <!-- Najlepsze samochody -->
                     <h1><small>TOP Samochody</small></h1><br>
-         
-                         {% for rent in rents %}
+                                 {% for rent in rents %}
                
                     <a href="{{path('car_show', {'id': rent.0.id})}}">
                     <img src="{{asset('RentBundle/images/')}}{{ rent.0.image }}.jpg" alt="Cars" class="img-circle" height="70" width="70">
