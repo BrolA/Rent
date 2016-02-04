@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body bgcolor="#FFA500">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -11,22 +12,16 @@
     </head>
     <body>
     {% block body %}
-        
-                {% block header %}
-                <div class="container">
-            <header style="margin-top: 10px;">
-        joł
-
-                    
-
-                {% endblock %}
-        </div>
     {% endblock %}
         
         {% block javascripts %}
         <script src="http://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
             <script src="{{ asset('Resources/public/js/bootstrap.min.js') }}" type="text/javascript"></script>
         {% endblock %}
+Tekst
 
+<footer>
+test
+</footer>
     </body>
 </html>

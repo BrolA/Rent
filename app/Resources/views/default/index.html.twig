@@ -6,11 +6,46 @@
 			{% block body %}
    			 
    			 {% block header %}
+
+   			 
    			 {% endblock %}
 			<html>
 <body>
 
-			<div class="container">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AutoHaus Rent</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Strona główna</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="#">Info</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+			<div class="container text-center">
 
 				<img src="http://www.rentcar.pl/blog/wp-content/uploads/2015/09/pkw.png" alt="main_photo">
 
@@ -18,24 +53,70 @@
 
 
 
-   			 <div class="container">
+   			 <div class="container text-center">
 			<div>
 
 				<h1>Auto-RentHaus</h1>
 				<h3>Drive with the Best</h3>
-				<h4>Brol - Ignasik - Konieczny</h4>
+				<h4>Brol - Ignasik - Konieczny</h4><br>
 			</div>
 			</div>
 
-			<div class="container">
+			<div class="container text-right">
 			<a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/login" class="btn btn-primary">Zaloguj się</a>
 			</div>
-   			 </br></br>
+   			 </br>
 
-   			 <div class="container">
+   			 <div class="container text-right">
 			<a href="http://v-ie.uek.krakow.pl/~s180624/app_dev.php/register" class="btn btn-info">Zarejestruj się</a>
 			</div>
-			<br>
+			<br><br>
+
+			<div class="text-center">
+            <button type="button" class="btn btn-success btn-lg">TOP wypożyczane</button>
+            <button type="button" class="btn btn-success btn-lg">TOP-Rank</button>
+            <button type="button" class="btn btn-success btn-lg">Kategorie</button>
+
+        	</div>
+        	<br>
+
+        	<h1 style="text-align: center"><small>Samochody do wypożyczenia:</small></h1>
+
+
+<div class="row">
+        	<div class="container col-md-6 col-md-offset-3">
+        	<div class="table">
+
+		<table class="table table-striped">
+		<tr>
+		    <thead>
+		        <th>Samochód</th>
+		        <th>Model</th>
+		        
+		      </tr>
+		      </thead>
+		      <tbody>
+		<tr>
+		    <td><img src="http://cdn16.se.smcloud.net/t/photos/t/477726/2016-fiat-tipo_25107534.jpg" class="img-circle"></td>   <td>Fiat</td> 
+		</tr>
+		<tr>
+		    <td><img src="http://cdn6.se.smcloud.net/t/photos/t/478251/toyota-s-fr-racing-concept_25116146.jpg" class="img-circle"></td>   <td>Toyota</td> 
+		</tr>
+		<tr>
+		    <td><img src="http://cdn8.se.smcloud.net/t/photos/t/294843/jeep-wrangler_19469652.jpg" class="img-circle"></td>   <td>Jeep</td> 
+		</tr>
+		<tr>
+		    <td><img src="http://cdn10.se.smcloud.net/t/photos/t/422209/2015-nowy-opel-astra_24070940.jpg" class="img-circle"></td>   <td>Opel</td> 
+		</tr>
+
+		</tbody>
+		</table>
+		  </div>
+		</div>
+	</div>
+
+		  
+        
 
 
 
